@@ -1,12 +1,12 @@
 <h1>Edit Profile</h1>
 
 <form action="/users/<%= @user.id %>" method="post">
-	<input type="hidden" name="method" value="patch">
+	<input type="hidden" name="_method" value="patch">
 	<label>Name: </label>
-	<input type="text" name="name"></input><br>
+	<input type="text" name="name" value="<%= @user.name%>"></input><br>
 	<label>Password: </label>
-	<input type="password" name="password"></input><br>
+	<input type="password" name="password" value="<%= @user.password%>"></input><br>
 	<label>Email: </label>
-	<input type="text" name="email"></input><br>
+	<input type="text" name="email" value="<%= @user.email%>"></input><br>
 	<input type="submit" value="Update"></input>
 </form>
